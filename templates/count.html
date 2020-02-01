@@ -1,0 +1,15 @@
+
+<p>There are {{ count }} words in your text</p>
+<a href="{% url 'home' %}">Back to Home</a>
+<a href="{% url 'about' %}">About</a>
+
+<h2>Your Text: </h2>
+{{ fulltext }}
+
+<h1>Word Count</h1>
+<br/>
+<br/>
+{% for item, total in itemdict %}
+{{ item }}-{{ total }}
+<br/>
+{% endfor %}
